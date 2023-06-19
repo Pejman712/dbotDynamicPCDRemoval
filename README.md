@@ -27,6 +27,7 @@ Example of Dynamic points removed in pcd using average sphere method is shown be
   <img src="md.png" alt="Dynamic Map" width="350"/>
   <img src="mf.png" alt="Filtered" width="300"/>
 </div>
+
 ## Installation
 
 Required Libraries
@@ -36,3 +37,6 @@ $ pip install numpy
 $ pip install -U scikit-learn
 $ pip install scipy
 $ pip install open3d 
+
+## Usage  
+After running DBGFA.py code, you can specify the address you want to save your filtred pcd files, the filtering method and the number of maps you use as intake and outake. 
