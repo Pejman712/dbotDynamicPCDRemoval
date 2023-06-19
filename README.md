@@ -23,6 +23,10 @@ SLAM (Simultaneous Localization and Mapping) has gained popularity in recent yea
 
 Include a link or instructions on how to access a live demo or video showcasing your project.
 
+| Image 1                            | Image 2                            |
+| ---------------------------------- | ---------------------------------- |
+| ![Image 1](md.png) | ![Image 2](mf.png) |
+
 ## Installation
 
 Required Libraries
