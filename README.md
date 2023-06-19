@@ -37,6 +37,10 @@ $ pip install numpy
 $ pip install -U scikit-learn
 $ pip install scipy
 $ pip install open3d 
+```
 
 ## Usage  
+
 After running DBGFA.py code, you can specify the address you want to save your filtred pcd files, the filtering method and the number of maps you use as intake and outake. 
+
+
