@@ -3,7 +3,7 @@ This repository aims to provide comprehensive support to students working on pro
 
 # Dynamic Point Cloud Removal in PCD
 
-Funded by DigiTally Project this reprostory aims to assist students with projects related to point cloudd. 
+Funded by DigiTally Project this reprostory aims to assist students with projects related to point cloud. 
 
 ## Table of Contents
 
