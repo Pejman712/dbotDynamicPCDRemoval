@@ -24,8 +24,8 @@ SLAM (Simultaneous Localization and Mapping) has gained popularity in recent yea
 Example of Dynamic points removed in pcd using average sphere method is shown below.
 
 <div>
-  <img src="md.png" alt="Dynamic Map" width="350"/>
-  <img src="mf.png" alt="Filtered" width="300"/>
+  <img src="md1.png" alt="Dynamic Map" width="350"/>
+  <img src="mf1.png" alt="Filtered" width="300"/>
 </div>
 
 ## Installation
