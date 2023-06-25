@@ -21,7 +21,7 @@ voxel_size = 0.6
 method= "Average"
 #method = "Sphere_Based_Volume"
 #method = "ConvexHull"
-address = "C:/Users/roudk/OneDrive/Desktop/Thesis code/registration/individual/"
+address = "saving address"
 pointsize = 2
 ND = True
 
@@ -280,24 +280,26 @@ if algorithm == True:
         points1,dp1,dence1 = densityfiltering(pcd_data,dence,npodist,treshold,iteration_number,step,n_neighbors,method)
         pcd = o3d.geometry.PointCloud()
         pcd.points = o3d.utility.Vector3dVector(points1)
-        pcd1 = o3d.geometry.PointCloud()
-        pcd1.points = o3d.utility.Vector3dVector(pcd_data[dp1])
-        o3d.io.write_point_cloud("{}/{} Method, {} nearest points, {:.2f} percent deleted points with treshold of {}.pcd".format(address,method,k,100*len(dp1)/len(pcd_data),treshold),pcd)
-                #o3d.1io.write_point_cloud("{} Method, {} nearest points, {:.2f} percent deleted points with treshold of {}.ply".format(method,k,100*len(dp1)/len(pcd_data),treshold),pcd)
-                #np.savetxt("{} Method, {} nearest points, {:.2f} percent deleted points with treshold of {}.ply".format(method,k,100*len(dp1)/len(pcd_data),treshold), points1, delimiter=" "
-        vis = o3d.visualization.Visualizer()     
-        vis.create_window()
-        opts = vis.get_render_option()
-        opts.point_size = pointsize
-        vis.add_geometry(pcd)
-        del opts
-        image = vis.capture_screen_image("{}/{} Method, {} nearest points, {:.2f} percent deleted points with treshold of {} and {}.png".format(address,method,k,100*len(dp1)/len(pcd_data),treshold,iteration_number),do_render=True)
-        vis.destroy_window()
-        progressbar(100*len(dp1)/len(pcd_data),50,30,'■') 
-        if 100*len(dp1)/len(pcd_data) > 50:
+        if 100*len(dp1)/len(pcd_data)%5 < 1:
+        #pcd1 = o3d.geometry.PointCloud()
+        #pcd1.points = o3d.utility.Vector3dVector(pcd_data[dp1]) 
+            o3d.io.write_point_cloud("{}/{} Method, {} nearest points, {:.2f} percent deleted points with treshold of {}.pcd".format(address,method,k,100*len(dp1)/len(pcd_data),treshold),pcd)
+                    #o3d.1io.write_point_cloud("{} Method, {} nearest points, {:.2f} percent deleted points with treshold of {}.ply".format(method,k,100*len(dp1)/len(pcd_data),treshold),pcd)
+                    #np.savetxt("{} Method, {} nearest points, {:.2f} percent deleted points with treshold of {}.ply".format(method,k,100*len(dp1)/len(pcd_data),treshold), points1, delimiter=" "
+            vis = o3d.visualization.Visualizer()     
+            vis.create_window()
+            opts = vis.get_render_option()
+            opts.point_size = pointsize
+            vis.add_geometry(pcd)
+            del opts
+            image = vis.capture_screen_image("{}/{} Method, {} nearest points, {:.2f} percent deleted points with treshold of {} and {}.png".format(address,method,k,100*len(dp1)/len(pcd_data),treshold,iteration_number),do_render=True)
+            vis.destroy_window()
+        progressbar(100*len(dp1)/len(pcd_data),40,30,'■') 
+        if 100*len(dp1)/len(pcd_data) > 31:
             print("Stopping the code.")
+            elapsed_time = time.time() - start_time
+            print(f"Processing time: {elapsed_time} seconds")
             sys.exit()
-
  
             
 
