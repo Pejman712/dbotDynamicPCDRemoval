@@ -25,7 +25,7 @@ Example of Dynamic points removed in pcd using average sphere method is shown be
 
 <div>
   <img src="md1.png" alt="Dynamic Map" width="300"/>
-  <img src="mf1.png" alt="Filtered" width="300"/>
+  <img src="mf1.png" alt="Filtered" width="320"/>
 </div>
 
 ## Installation
