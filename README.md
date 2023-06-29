@@ -17,7 +17,7 @@ Funded by DigiTally Project this reprostory aims to assist students with project
 
 ## Project Description
 
-n recent years, indoor autonomous vehicle robotics have gained significant
+In recent years, indoor autonomous vehicle robotics have gained significant
 popularity due to their efficiency and ability to enhance overall quality in factory
 settings. These robots rely heavily on accurate maps of their surroundings for
 localization. However, in highly dynamic factory environments, the mapping process
