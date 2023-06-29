@@ -17,7 +17,28 @@ Funded by DigiTally Project this reprostory aims to assist students with project
 
 ## Project Description
 
-SLAM (Simultaneous Localization and Mapping) has gained popularity in recent years as it addresses the challenges of both localization and mapping simultaneously. One key issue in mapping is the registration of false points in dynamic environments, which can have a negative impact on localization accuracy. Existing studies often require highly dynamic environments, are computationally expensive, and have a high probability of false detection. Furthermore, many of these studies have primarily focused on outdoor environments. To overcome these challenges, this study aims to propose efficient and reliable filtering algorithms in indoor environments, namely the max distance sphere method, average distance sphere method, and Convexhull. To evaluate the performance of the algorithms, the study compares the odometry obtained from a merged noisy map (constructed by aligning maps from four different times) captured during an annual event at Aalto University called PDP, with its filtered map and a clean map constructed during a deserted period. Furthermore, the study assesses the computational power required, reliability, and ease of implementation for each method. The results of this study demonstrate the effectiveness of the proposed filtered algorithms in achieving engineering-level localization accuracy. These algorithms have potential applications in various settings such as factories, construction sites, and digital twin applications.
+n recent years, indoor autonomous vehicle robotics have gained significant
+popularity due to their efficiency and ability to enhance overall quality in factory
+settings. These robots rely heavily on accurate maps of their surroundings for
+localization. However, in highly dynamic factory environments, the mapping process
+often registers dynamic points, which can negatively impact localization accuracy
+in future uses. This study aims to address this challenge by aligning and merging
+maps of the same location from different time periods, resulting in denser stationary
+points and sparser dynamic points. To achieve this, the study proposes three filtering
+algorithms: the max distance sphere method, the average distance sphere method, and
+the convex hull method. These algorithms involve different approaches to estimate the
+volume occupied by a point and its k (user defined) neighboring points. By repeating
+this process for all points in the point cloud, a density factor is derived, which is then
+used as a threshold to remove the dynamic points. To evaluate the performance of
+the filtering algorithms, the study compares the odometry obtained from a merged
+noisy map with its corresponding filtered map and a clean map constructed during a
+period of low activity. The study also assesses factors such as computational power
+requirements, reliability, and ease of implementation for each method. The findings of
+the study demonstrate that the proposed filtering algorithms perform nearly as well as
+a clean map in the odometry test, while the noisy map fails to accurately localize itself,
+especially after high-angle turns. Among the three proposed methods, the average
+distance sphere method proves to be the seemingly the most effective, primarily due to
+its ability to minimize the false removal of dynamic points. 
 
 ## Demo
 
