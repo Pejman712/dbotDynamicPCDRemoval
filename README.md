@@ -49,6 +49,8 @@ Example of Dynamic points removed in pcd using average sphere method is shown be
   <img src="mf1.png" alt="Filtered" width="310"/>
 </div>
 
+![Localization Example](demo.gif)
+
 ## Installation
 
 Required Libraries
